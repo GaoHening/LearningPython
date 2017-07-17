@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 print("I'm ok")
 print("I\'m \"ok\"")
 print("\\\n\\")
@@ -21,9 +24,21 @@ print(b)
 # 练习
 n = 123
 f = 456.789
-s1 = 'Hello, world'
-s2 = 'Hello, \'Adam\''
+
 s3 = r'Hello, "Bart"'
 s4 = r'''Hello,
 Lisa!'''
 print(s4)
+
+print(ord("a"))
+print(chr(25991))
+r = b"\xe4\xb8\xad\xe6\x96\x87".decode('utf-8')
+print(r)
+
+print("%s growth rate:%d%%" % ("The", 50))
+
+s1 = 72
+s2 = 85
+r = (s2-s1)/s1*100
+print("%.1f%%" % r)
+
