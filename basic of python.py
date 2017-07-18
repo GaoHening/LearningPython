@@ -88,3 +88,9 @@ print(re)
 L = ['Bart', 'Lisa', 'Adam']
 for name in L:
     print("hello,", name)
+
+d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
+print(d["Bob"])
+d.pop("Bob")
+print(d)
+
