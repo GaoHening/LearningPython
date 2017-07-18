@@ -1,0 +1,5 @@
+L = list(range(100))
+print(L[:10])
+print(L[:10:2])
+# print(L)
+print("ABCDE"[:2])
