@@ -42,3 +42,19 @@ s2 = 85
 r = (s2-s1)/s1*100
 print("%.1f%%" % r)
 
+classmate = ['A', 'B', 'C']
+print(classmate[len(classmate) - 1])
+classmate.append('D')
+print(classmate)
+
+L = [
+    ['Apple', 'Google', 'Microsoft'],
+    ['Java', 'Python', 'Ruby', 'PHP'],
+    ['Adam', 'Bart', 'Lisa']
+]
+# 打印Apple:
+print(L[0][0])
+# 打印Python:
+print(L[1][1])
+# 打印Lisa:
+print(L[2][2])
