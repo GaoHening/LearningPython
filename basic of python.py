@@ -58,3 +58,24 @@ print(L[0][0])
 print(L[1][1])
 # 打印Lisa:
 print(L[2][2])
+
+s = input("birth:")
+if int(s)<2000:
+    print("before 00")
+else:
+    print("after 00")
+
+height = 1.79
+weight = 90
+bmi = weight/(height*height)
+print("your bmi is", bmi)
+if bmi < 18.5:
+    print("过轻")
+elif bmi < 25:
+    print("正常")
+elif bmi < 28:
+    print("过重")
+elif bmi < 32:
+    print("肥胖")
+else:
+    print("严重肥胖")
