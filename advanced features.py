@@ -59,3 +59,11 @@ for t in triangles():
     n = n + 1
     if n == 10:
         break
+
+
+it = iter([1, 2, 3, 4])
+while True:
+    try:
+        print(next(it))
+    except StopIteration:
+        break
