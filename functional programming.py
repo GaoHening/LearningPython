@@ -144,5 +144,11 @@ f = lazy_sum([1, 2, 3, 4])
 print(f())
 # 函数的闭包
 
+print(list(map(lambda x: x*x, [1, 2, 3, 4])))
 
+
+def build(x, y):
+    return lambda: x*x+y*y
+f = build(1, 2)
+print(f())
 
