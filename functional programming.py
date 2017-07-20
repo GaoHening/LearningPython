@@ -1,4 +1,5 @@
 from functools import reduce
+import functools
 # reduce()函数已经被从全局名字空间里移除了，它现在被放置在fucntools模块里
 # 用的话要 先引入from functools import reduce
 
@@ -166,3 +167,11 @@ def log(func):
 def now():
     print('2015-3-25')
 now()
+
+
+newmax = functools.partial(max, 10)
+print(newmax(1, 2, 3))
+
+int2 = functools.partial(int, base=2)
+print(int2('101'))
+
