@@ -129,3 +129,20 @@ def by_score(x):
 
 print(sorted(L, key=by_name))
 print(sorted(L, key=by_score, reverse=True))
+
+
+def lazy_sum(args):
+
+    def sum1():
+        ax = 0
+        for a in args:
+            ax = ax + a
+        return ax
+    return sum1
+
+f = lazy_sum([1, 2, 3, 4])
+print(f())
+# 函数的闭包
+
+
+
