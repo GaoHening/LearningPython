@@ -13,3 +13,22 @@ Gao = Student("Gao", 95)
 Gao.printgrade()
 Gao.setgrade(80)
 Gao.printgrade()
+
+
+class Animal(object):
+    def running(self):
+        print('Animal is running!')
+
+
+class Dog(Animal):
+    def running(self):
+        print('Dog is running!')
+
+
+class Cat(Animal):
+    pass
+
+dog = Dog()
+dog.running()
+
+
