@@ -33,3 +33,13 @@ dog.running()
 print(type(123))
 print(isinstance([1, 3, 4], (list, tuple)))
 
+
+class NewStudent(object):
+    name = 'student'
+
+s = NewStudent()
+print(s.name, NewStudent.name)
+s.name = 'newname'
+print(s.name, NewStudent.name)
+del s.name
+print(s.name, NewStudent.name)
