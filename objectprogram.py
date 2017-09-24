@@ -30,5 +30,6 @@ class Cat(Animal):
 
 dog = Dog()
 dog.running()
-
+print(type(123))
+print(isinstance([1, 3, 4], (list, tuple)))
 
