@@ -1,3 +1,6 @@
+from enum import Enum, unique
+
+
 class Student(object):
     def __init__(self):
         self.__score = 0
@@ -138,3 +141,17 @@ class Chain(object):
 print(Chain().staues.da.dsad.dsad.cxfg)
 text = Chain()
 text()
+
+
+@unique
+class Weekday(Enum):
+    Sun = 0
+    Mon = 1
+    Tue = 2
+    Wed = 3
+    Thu = 4
+    Fri = 5
+    Sat = 6
+
+for name, member in Weekday.__members__.items():
+    print(str(name) + '=>' + str(member))
