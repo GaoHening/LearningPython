@@ -53,3 +53,27 @@ s = Screen()
 s.width = 1024
 s.height = 768
 print(s.resolution)
+
+
+class Animal(object):
+    pass
+
+
+class Mammal(Animal):
+    pass
+
+
+class Bird(Animal):
+    pass
+
+
+class Runable(object):
+    def run(self):
+        print("runing")
+
+
+class Dog(Mammal, Runable):
+    pass
+
+d = Dog()
+d.run()
