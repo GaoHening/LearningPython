@@ -77,3 +77,64 @@ class Dog(Mammal, Runable):
 
 d = Dog()
 d.run()
+
+
+class NewStudent(object):
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return 'name is ' + self.name
+
+    def __repr__(self):
+        return self.name
+
+print(NewStudent('Gao'))
+a = NewStudent('GAO')
+print(a)
+
+
+class Fib(object):
+    def __init__(self):
+        self.a = 0
+        self.b = 1
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        temp = self.a + self.b
+        self.a = self.b
+        self.b = temp
+        if self.a > 100:
+            raise StopIteration()
+        return self.a
+
+    def __getitem__(self, n):
+        tmpa, tmpb = 1, 1
+        for i in range(n):
+            tmpa, tmpb = tmpb, tmpa + tmpa
+        return tmpa
+
+fib = Fib()
+for num in fib:
+    print(num)
+print(fib[3])
+
+
+class Chain(object):
+    def __init__(self, path=''):
+        self.path = path
+
+    def __getattr__(self, path):
+        return Chain(self.path + '/' + path)
+
+    def __str__(self):
+        return self.path
+
+    def __call__(self, *args, **kwargs):
+        print('text')
+
+print(Chain().staues.da.dsad.dsad.cxfg)
+text = Chain()
+text()
