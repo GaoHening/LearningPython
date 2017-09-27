@@ -22,3 +22,13 @@ Lib = [x for x in os.listdir('.') if os.path.isfile(x) and os.path.splitext(x)[1
 print(Lib)
 
 
+def check_file(name, path='.'):  # 在当前目录和子目录查找包含对应字符串的文件路径
+    for tempname in os.listdir(path):
+        if os.path.isfile(tempname):
+            if name in os.path.split(tempname)[1]:
+                yield os.path.join(path,tempname)
+        else:
+            path_dep = os.path.join(path, tempname)
+            check_file(name, path_dep)
+
+print(list(check_file('cti')))
