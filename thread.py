@@ -2,6 +2,7 @@ from multiprocessing import Process, Pool, Queue
 import os
 import time
 import random
+import threading
 
 
 def child_do(name):
@@ -33,6 +34,23 @@ def read(queue):
             break
 
 
+def loop(thing):
+    print(thing + ' Thread ' + threading.current_thread().name + ' is running')
+    for n in range(5):
+        print(threading.current_thread().name + ' >>> ' + str(n))
+        time.sleep(1)
+    print(threading.current_thread().name + ' ends')
+
+if __name__ == '__main__':
+    print('now running is ' + threading.current_thread().name)
+    t1 = threading.Thread(target=loop, args=('info',))
+    t2 = threading.Thread(target=loop, args=('InFo',))
+    t1.start()
+    t2.start()
+    t2.join()
+    t1.join()
+    print(threading.current_thread().name + ' ends')
+'''
 if __name__ == '__main__':
     print('parent\'s ID is ' + str(os.getpid()))
     queue = Queue()
@@ -52,4 +70,7 @@ if __name__ == '__main__':
     # p.start()
     # p.join()
     print('All proccess are done')
+'''
+
+
 
